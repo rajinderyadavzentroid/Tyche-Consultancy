@@ -1,0 +1,117 @@
+/* ── Header ── */
+@media (max-width: 768px) {
+
+  .header-mobile-btn svg {
+    height: auto;
+    width: 20px;
+}
+  .header-desktop-nav {
+    display: none;
+  }
+
+  .header-mobile-btn {
+    display: block;
+  }
+
+  /* .header-mobile-nav {
+    display: none;
+  } */
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    padding: 5rem 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .services-grid,
+  .founder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .founder-bio {
+    gap: 0;
+  }
+}
+
+/* ── About Page ── */
+@media (max-width: 768px) {
+  .about-hero-section {
+    padding: 5rem 0;
+  }
+
+  .about-hero-title {
+    font-size: 2rem;
+  }
+
+  .about-story-grid,
+  .about-approach-grid,
+  .about-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* ── Blog Page ── */
+@media (max-width: 992px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-hero-section {
+    padding: 5rem 0;
+  }
+
+  .blog-hero-title {
+    font-size: 2rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-newsletter-form {
+    flex-direction: column;
+  }
+}
+
+/* ── Contact Page ── */
+@media (max-width: 768px) {
+  .contact-hero-section {
+    padding: 5rem 0;
+  }
+
+  .contact-hero-title {
+    font-size: 2rem;
+  }
+
+  .contact-methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+  }
+}
