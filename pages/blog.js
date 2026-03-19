@@ -32,13 +32,13 @@ export default function Blog() {
 
     return (
         <>
-            <Head>
+            {/* <Head>
                 <title>Blog – Tyche Consultancy</title>
                 <meta name="description" content="B2B Sales insights and strategies" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-            </Head>
+            </Head> */}
             <Layout>
                 <div>
 

@@ -70,13 +70,13 @@ export default function About() {
     };
     return (
         <>
-            <Head>
+            {/* <Head>
                 <title>About – Tyche Consultancy</title>
                 <meta name="description" content="B2B Lead Generation & LinkedIn Marketing" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-            </Head>
+            </Head> */}
             <Layout>
                 <div>
 

@@ -6,8 +6,8 @@ import logo from "@/src/images/main-logo.png";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "Services", path: "/services" },
-  { label: "Contact", path: "/contact" },
+  { label: "Blog", path: "/blog" },
+  { label: "Contact", path: "/contact-us" },
 ];
 
 export default function Footer() {
@@ -59,7 +59,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2026 Tyche Consultancy. All rights reserved.</p>
+            <p className="mb-0">&copy; 2026 Tyche Consultancy. All rights reserved.</p>
           </div>
         </div>
       </Container>

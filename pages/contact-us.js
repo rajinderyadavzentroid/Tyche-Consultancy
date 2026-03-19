@@ -85,13 +85,13 @@ export default function ContactUs() {
 
     return (
         <>
-            <Head>
+            {/* <Head>
                 <title>Contact – Tyche Consultancy</title>
                 <meta name="description" content="Get in touch with Tyche Consultancy" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-            </Head>
+            </Head> */}
             <Layout>
                 <div>
 
