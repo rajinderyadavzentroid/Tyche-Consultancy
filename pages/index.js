@@ -66,7 +66,7 @@ export default function Home() {
                 <p className="section-subtitle">
                   At Tyche Consultancy, we're not just about sales — we're about creating meaningful relationships and long-term success. We offer a comprehensive suite of services tailored to the specific needs of each client.
                 </p>
-                <Link href="/contact" className="btn-primary">Book a Call</Link>
+                <Link href="/contact-us" className="btn-primary">Book a Call</Link>
               </div>
             </Container>
           </section>
