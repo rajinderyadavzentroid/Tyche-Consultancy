@@ -50,10 +50,10 @@ export default function ContactUs() {
                     <section className="contact-section">
                         <Container>
                             <div className="contact-methods-grid">
-                                <a className="contact-method-card" href="mailto:hello@tycheconsultancy.com">
+                                <a className="contact-method-card" href="mailto:shaguna@zentroid.com">
                                     <div className="contact-method-icon"><Mail size={24} /></div>
                                     <h3 className="contact-method-title">Email Us</h3>
-                                    <p className="contact-method-value">hello@tycheconsultancy.com</p>
+                                    <p className="contact-method-value">shaguna@zentroid.com</p>
                                     <p className="contact-method-desc">We'll respond within 24 hours</p>
                                 </a>
 
