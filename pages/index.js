@@ -2,151 +2,305 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "@/src/component/Layout";
+import Tycheclientslogo from "@/src/images/tyche-clients-logo.jpg";
+import { Users, Building, Settings, DollarSign, Headphones, ArrowRight, CheckCircle } from "lucide-react";
+import ImageWithFallback from "@/src/component/ImageWithFallback";
+import { Button, Card, CardContent } from "@/src/component/UI";
 import { Container } from "react-bootstrap";
-import ShagunaKhetarpal from "@/src/images/shaguna-khetarpal.jpg";
-import Clientsgrid from "@/src/images/tyche-clients-logo.jpg";
-import { useEffect, useState } from "react";
 
 export default function Home() {
-
-  const [calendlyReady, setCalendlyReady] = useState(false);
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.onload = () => setCalendlyReady(true);
-    document.body.appendChild(script);
-    return () => document.body.removeChild(script);
-  }, []);
-
-  const openCalendly = () => {
-    if (calendlyReady && window.Calendly) {
-      window.Calendly.initPopupWidget({ url: "https://calendly.com/shaguna_zentroid/30min" });
+  const services = [
+    {
+      icon: <Users size={32} />,
+      title: "Talent Acquisition",
+      description: " Handpicked professionals tailored to your needs"
+    },
+    {
+      icon: <Building size={32} />,
+      title: "Dedicated Teams",
+      description: "Fully aligned with your business goals"
+    },
+    {
+      icon: <Settings size={32} />,
+      title: "Office Infrastructure",
+      description: "Modern, fully equipped workspaces"
+    },
+    {
+      icon: <DollarSign size={32} />,
+      title: "HR & Payroll",
+      description: "Complete employee lifecycle management"
+    },
+    {
+      icon: <Headphones size={32} />,
+      title: "Operational Support",
+      description: "We handle the backend, you lead the growth"
     }
-  };
+  ];
+
+  const steps = [
+    {
+      number: "01",
+      title: "Share Requirements",
+      description: " Define the roles and skills you need"
+    },
+    {
+      number: "02",
+      title: "We Build Your Team",
+      description: " We source, vet, and hire exceptional talent"
+    },
+    {
+      number: "03",
+      title: "We Set Up Everything",
+      description: "Office, HR, and operations handled seamlessly"
+    },
+    {
+      number: "04",
+      title: "You Scale with Confidence",
+      description: "Manage your team while we take care of the rest"
+    }
+  ];
+
+  const benefits = [
+    "No legal entity required in India",
+    "Faster, premium-quality hiring",
+    "Plug-and-play infrastructure",
+    "Fully managed operations",
+    "Scalable and cost-efficient solutions"
+  ];
+
+  const clientLogos = [
+    { name: "TechCorp", initial: "TC" },
+    { name: "Global Solutions", initial: "GS" },
+    { name: "Innovation Labs", initial: "IL" },
+    { name: "Digital Partners", initial: "DP" }
+  ];
+
   return (
     <>
       <Head>
-        <title>Tyche Consultancy</title>
-        <meta name="description" content="B2B Lead Generation & LinkedIn Marketing" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+        <title>Home | Tyche Consultancy</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://www.tycheconsultancy.com" />
+        <meta property="og:url" content="https://www.tycheconsultancy.com" />
+        <meta property="og:title" content="Home | Tyche Consultancy" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="https://www.tycheconsultancy.com/socials/social-icon.jpg" />
       </Head>
       <Layout>
-        <div>
-
+        <div className="page-wrapper">
           {/* Hero Section */}
           <section className="hero-section">
-            <div className="hero-bg">
-              <img
-                src="https://images.unsplash.com/photo-1759850426415-8888ea55b07b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBidXNpbmVzcyUyMGNpdHlzY2FwZSUyMHNreXNjcmFwZXJ8ZW58MXx8fHwxNzczNzQwNTc4fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Modern business background"
+            <div className="hero-bg-overlay">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1681321570365-df53da7dbaa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBuZXR3b3JrJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzQ1MDIzMDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Global network"
                 className="hero-bg-img"
               />
             </div>
-            <div className="hero-overlay"></div>
-            <div className="hero-content">
-              <h1 className="hero-title">
-                B2B Sales,<br />
-                Making Outbound Lead Generation and LinkedIn Content Marketing Accessible
-              </h1>
-              <p className="hero-subtitle">
-                Over the years, we have closed over $1000K+ in sales for Indian and overseas companies through LinkedIn-driven B2B outbound lead generation.
-              </p>
-              <Link href="/contact-us" className="hero-btn">Book a Call</Link>
-            </div>
-          </section>
 
-          {/* Services Intro */}
-          <section className="services-intro-section">
             <Container>
-              <div className="section-center">
-                <h2 className="section-title">Fast-Track Your Sales with Tyche's Expert Services</h2>
-                <p className="section-subtitle">
-                  At Tyche Consultancy, we're not just about sales — we're about creating meaningful relationships and long-term success. We offer a comprehensive suite of services tailored to the specific needs of each client.
+              <div className="hero-content">
+                <div className="hero-badge">
+                  Build Elite Teams. Effortlessly.
+                </div>
+                <h1 className="hero-title">
+                  Build Your Dream Team in India:<br />
+                  <span className="hero-title-accent">Without the Complexity</span>
+                </h1>
+                <p className="hero-subtitle">
+                  Tyche Consultancy enables global businesses to scale with exceptional talent, world-class infrastructure, and seamless operational support so you can focus entirely on growth.
                 </p>
-                <Link href="/contact-us" className="btn-primary">Book a Call</Link>
-              </div>
-            </Container>
-          </section>
-
-          {/* Core Services */}
-          <section className="core-services-section">
-            <Container>
-              <div className="services-grid">
-                <div className="service-card">
-                  <div className="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                      <path d="M18.6666 24.5V22.1667C18.6666 20.929 18.175 19.742 17.2998 18.8668C16.4246 17.9917 15.2377 17.5 14 17.5H6.99998C5.7623 17.5 4.57532 17.9917 3.70015 18.8668C2.82498 19.742 2.33331 20.929 2.33331 22.1667V24.5" stroke="white" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M10.5 12.8333C13.0773 12.8333 15.1666 10.744 15.1666 8.16667C15.1666 5.58934 13.0773 3.5 10.5 3.5C7.92265 3.5 5.83331 5.58934 5.83331 8.16667C5.83331 10.744 7.92265 12.8333 10.5 12.8333Z" stroke="white" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M25.6667 24.4999V22.1666C25.6659 21.1326 25.3218 20.1282 24.6883 19.311C24.0548 18.4938 23.1678 17.9101 22.1667 17.6516" stroke="white" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M18.6667 3.65161C19.6705 3.90863 20.5602 4.49243 21.1956 5.31097C21.831 6.12952 22.1758 7.13625 22.1758 8.17244C22.1758 9.20864 21.831 10.2154 21.1956 11.0339C20.5602 11.8525 19.6705 12.4363 18.6667 12.6933" stroke="white" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <h2 className="service-card-title">B2B Outbound Lead Generation</h2>
-                  <p className="service-card-text">
-                    From defining your target audience to connecting with decision-makers, the process is long and complex. At Tyche, we handle it end-to-end — generating high-intent B2B leads and actively helping you close deals.
-                  </p>
-                </div>
-                <div className="service-card">
-                  <div className="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                      <path d="M18.6666 9.33337C20.5231 9.33337 22.3036 10.0709 23.6164 11.3836C24.9291 12.6964 25.6666 14.4769 25.6666 16.3334V24.5H21V16.3334C21 15.7145 20.7541 15.121 20.3165 14.6835C19.879 14.2459 19.2855 14 18.6666 14C18.0478 14 17.4543 14.2459 17.0167 14.6835C16.5791 15.121 16.3333 15.7145 16.3333 16.3334V24.5H11.6666V16.3334C11.6666 14.4769 12.4041 12.6964 13.7169 11.3836C15.0296 10.0709 16.8101 9.33337 18.6666 9.33337Z" stroke="white" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M7.00004 10.5H2.33337V24.5H7.00004V10.5Z" stroke="white" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M4.66671 7.00004C5.95537 7.00004 7.00004 5.95537 7.00004 4.66671C7.00004 3.37804 5.95537 2.33337 4.66671 2.33337C3.37804 2.33337 2.33337 3.37804 2.33337 4.66671C2.33337 5.95537 3.37804 7.00004 4.66671 7.00004Z" stroke="white" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <h2 className="service-card-title">LinkedIn Content Marketing</h2>
-                  <p className="service-card-text">
-                    Whether you're a company, founder, or C-level executive, your story matters. We help you consistently showcase your journey, expertise, and services — building a strong and impactful LinkedIn presence.
-                  </p>
+                <div className="hero-btn-group">
+                  <Link href="/contact-us">
+                    <Button size="lg" className="hero-btn-primary">
+                      Build Your Team
+                    </Button>
+                  </Link>
+                  <Link href="/contact-us">
+                    <Button size="lg" variant="outline" className="hero-btn-outline">
+                      Schedule a Consultation
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Container>
           </section>
 
-          {/* Founder Section */}
-          <section className="founder-section">
+          {/* About Preview Section */}
+          <section className="about-section">
             <Container>
-              <div className="founder-grid">
+              <div className="about-grid">
                 <div>
-                  <Image className="founder-img" src={ShagunaKhetarpal} alt="Shaguna Khetarpal - Founder" />
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1758691736975-9f7f643d178e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwdGVhbSUyMG9mZmljZSUyMGNvbGxhYm9yYXRpb258ZW58MXx8fHwxNzc0NDIyMTAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Team collaboration"
+                    className="about-img"
+                  />
                 </div>
                 <div>
-                  <p className="founder-label">Founder – Tyche Consultancy</p>
-                  <h2 className="founder-name">Shaguna Khetarpal</h2>
-                  <div className="founder-bio">
-                    <p>Introducing Shaguna Khetarpal, the founder of Tyche Consultancy. With a touch of caffeine and a pinch of wit, she brings a unique blend of expertise, humour, and unstoppable energy to the table.</p>
-                    <p>At Tyche, we're not your typical sales team. Led by Shaguna, we combine strategy with personality — blending sharp execution, creativity, and a human touch.</p>
-                    <p>Join us on this exciting journey as we help you overcome sales challenges, accelerate growth, and build a scalable revenue engine.</p>
+                  <h2 className="about-title">
+                    About Us
+
+                  </h2>
+                  <p className="about-text">
+                    At Tyche Consultancy, we help ambitious companies expand into India without the burden of setting up operations. From hiring top-tier talent to managing infrastructure and compliance, we deliver a seamless, end-to-end experience.
+                  </p>
+                  <Link href="/about">
+                    <Button className="about-btn">
+                      Learn More About Us
+                      <ArrowRight size={16} style={{ marginLeft: '0.5rem' }} />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </Container>
+          </section>
+
+          {/* Services Overview */}
+          <section className="services-section">
+            <Container>
+              <div className="section-inner">
+                <div className="section-center">
+                  <h2 className="services-title">
+                    What We Offer
+                  </h2>
+                  <p className="services-subtitle">
+                    End-to-End Team Building Solutions
+                  </p>
+                </div>
+
+                <div className="services-grid">
+                  {services.map((service, index) => (
+                    <Card key={index} className="service-card">
+                      <CardContent className="service-card-body">
+                        <div className="service-icon-wrap">
+                          {service.icon}
+                        </div>
+                        <h3 className="service-card-title">{service.title}</h3>
+                        <p className="service-card-text">
+                          {service.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </Container>
+          </section>
+
+          {/* How It Works */}
+          <section className="steps-section">
+            <Container>
+              <div className="section-inner">
+                <div className="section-center">
+                  <h2 className="steps-title">
+                    How It Works
+                  </h2>
+                  <p className="steps-subtitle">
+                    Four simple steps to building your dream team in India.
+                  </p>
+                </div>
+
+                <div className="steps-grid">
+                  {steps.map((step, index) => (
+                    <div key={index} className="step-item">
+                      <div className="step-card">
+                        <div className="step-number">
+                          {step.number}
+                        </div>
+                        <h3 className="step-title">{step.title}</h3>
+                        <p className="step-text">
+                          {step.description}
+                        </p>
+                      </div>
+                      {index < steps.length - 1 && (
+                        <div className="step-arrow-wrap">
+                          <ArrowRight size={32} />
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Container>
+          </section>
+
+          {/* Why Choose Us */}
+          <section className="why-section">
+            <Container>
+              <div className="section-inner">
+                <div className="why-grid">
+                  <div>
+                    <h2 className="why-title">
+                      Why Choose Us
+                    </h2>
+                    <p className="why-text">
+                      We remove every barrier between you and building a world-class team in India. No legal complexities, no operational headaches just results.
+                    </p>
+                    <div className="why-benefits-list">
+                      {benefits.map((benefit, index) => (
+                        <div key={index} className="why-benefit-item">
+                          <div className="why-benefit-icon">
+                            <CheckCircle size={20} />
+                          </div>
+                          <p className="why-benefit-text">{benefit}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <ImageWithFallback
+                      src="https://images.unsplash.com/photo-1761818645928-47e5dad8ec76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2UlMjBpbmRpYXxlbnwxfHx8fDE3NzQ1MDIzMDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                      alt="Modern office workspace"
+                      className="why-img"
+                    />
                   </div>
                 </div>
               </div>
             </Container>
           </section>
 
-          {/* Clients Section */}
+          {/* Client Logos */}
           <section className="clients-section">
             <Container>
-              <h2 className="section-title text-center">Clients We Have Catered</h2>
-              <div className="clients-grid">
-                <Image src={Clientsgrid} alt="Clients we have Catered" />
+              <div className="section-inner-sm">
+                <p className="clients-label">
+                  Trusted by Global Companies
+                </p>
+                <div className="clients-grid">
+                  <Image src={Tycheclientslogo} alt="tyche clients logo" />
+                </div>
               </div>
             </Container>
           </section>
 
-          {/* Final CTA */}
+          {/* Closing CTA Section */}
           <section className="cta-section">
-            <Container>
-              <div className="text-center">
-                <h2 className="cta-title">Ready to Scale Your B2B Sales?</h2>
-                <p className="cta-subtitle">Let's build a predictable outbound engine for your business.</p>
-                <button className="btn-white" onClick={openCalendly} disabled={!calendlyReady}>Book a Call</button>
-              </div>
-            </Container>
-          </section>
+            <div className="cta-bg-overlay">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1681321570365-df53da7dbaa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBuZXR3b3JrJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzQ1MDIzMDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Background"
+                className="cta-bg-img"
+              />
+            </div>
 
+            <div className="cta-content">
+              <h2 className="cta-title">
+                Your Global Expansion,<br />
+                <span className="cta-title-accent">Simplified</span>
+              </h2>
+              <p className="cta-subtitle">
+                Build and manage your India team with confidence while we handle everything behind the scenes.
+              </p>
+              <Link href="/contact-us">
+                <Button size="lg" className="cta-btn">
+                  Get Started Today
+                </Button>
+              </Link>
+            </div>
+          </section>
         </div>
       </Layout>
     </>

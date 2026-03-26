@@ -1,106 +1,28 @@
-/* ── Header ── */
-@media (max-width: 768px) {
-
-  .header-mobile-btn svg {
-    height: auto;
-    width: 20px;
-}
-  .header-desktop-nav {
-    display: none;
-  }
-
-  .header-mobile-btn {
-    display: block;
-  }
-
-  /* .header-mobile-nav {
-    display: none;
-  } */
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-section {
-    padding: 5rem 0;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-
-  .services-grid,
-  .founder-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .clients-grid {
+@media (max-width: 1024px) {
+  .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .founder-bio {
-    gap: 0;
-  }
-}
-
-/* ── About Page ── */
-@media (max-width: 768px) {
-  .about-hero-section {
-    padding: 5rem 0;
-  }
-
-  .about-hero-title {
-    font-size: 2rem;
-  }
-
-  .about-story-grid,
-  .about-approach-grid,
-  .about-why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-cta-title {
-    font-size: 1.75rem;
-  }
-}
-
-/* ── Blog Page ── */
-@media (max-width: 992px) {
-  .blog-grid {
+  .steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .svc-process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .blog-hero-section {
-    padding: 5rem 0;
-  }
-
-  .blog-hero-title {
-    font-size: 2rem;
-  }
-
-  .blog-grid {
+  .about-overview-grid {
     grid-template-columns: 1fr;
   }
 
-  .blog-newsletter-form {
-    flex-direction: column;
-  }
-}
-
-/* ── Contact Page ── */
-@media (max-width: 768px) {
-  .contact-hero-section {
-    padding: 5rem 0;
+  .about-mv-grid {
+    grid-template-columns: 1fr;
   }
 
-  .contact-hero-title {
-    font-size: 2rem;
+  .about-approach-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-methods-grid {
@@ -111,7 +33,128 @@
     grid-template-columns: 1fr;
   }
 
-  .contact-submit-btn {
+  .about-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .svc-block {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .svc-process-grid {
+    grid-template-columns: auto;
+  }
+
+  .svc-cta-title {
+    font-size: 1.75rem;
+  }
+
+  .header-desktop-nav {
+    display: none;
+  }
+
+  .header-mobile-btn {
+    display: block;
+    color: #000;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero-title br {
+    display: none;
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-arrow-wrap {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .hero-subtitle {
+    color: #d1d5db;
+    font-size: 18px;
+  }
+
+  .hero-btn-primary {
     width: 100%;
+    padding: 10px 2rem;
+  }
+
+  .hero-btn-group a {
+    width: 100%;
+  }
+
+  .hero-btn-outline {
+    width: 100%;
+    padding: 10px 2rem;
+  }
+
+  .about-title {
+    margin-bottom: 15px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .services-title {
+    margin-bottom: 15px;
+  }
+
+  .services-subtitle {
+    font-size: 16px;
+  }
+
+  .section-center {
+    margin-bottom: 2rem;
+  }
+
+  .steps-subtitle {
+    font-size: 16px;
+  }
+
+  .why-text {
+    font-size: 16px;
+  }
+
+  .cta-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 }
