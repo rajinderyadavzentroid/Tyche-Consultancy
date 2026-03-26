@@ -376,10 +376,11 @@ body {
 }
 
 .svc-block-list {
-  list-style: none;
-  display: flex;
   flex-direction: column;
   gap: 1rem;
+  list-style: none;
+  display: flex;
+  padding: 0;
 }
 
 .svc-block-item {

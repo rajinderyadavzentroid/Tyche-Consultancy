@@ -120,10 +120,10 @@ export default function Services() {
                                             <div className="svc-block-left">
                                                 <div className="svc-block-icon">{serviceIcons[index]}</div>
                                                 <h3 className="svc-block-title">{service.title}</h3>
-                                                <p className="svc-block-desc">{service.description}</p>
+                                                {/* <p className="svc-block-desc">{service.description}</p> */}
                                             </div>
                                             <div className="svc-block-right">
-                                                <h4 className="svc-block-included">What's Included:</h4>
+                                                <h4 className="svc-block-included">{service.description}</h4>
                                                 <ul className="svc-block-list">
                                                     {service.details.map((detail, idx) => (
                                                         <li key={idx} className="svc-block-item">
