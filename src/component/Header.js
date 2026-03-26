@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/src/images/main-logo.png";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/src/component/UI";
 import { Container } from "react-bootstrap";
@@ -17,20 +17,11 @@ const navItems = [
 export default function Header() {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [calendlyReady, setCalendlyReady] = useState(false);
 
   const isActive = (path) => router.pathname === path;
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.onload = () => setCalendlyReady(true);
-    document.body.appendChild(script);
-    return () => document.body.removeChild(script);
-  }, []);
-
   const openCalendly = () => {
-    if (calendlyReady && window.Calendly) {
+    if (typeof window !== "undefined" && window.Calendly) {
       window.Calendly.initPopupWidget({ url: "https://calendly.com/shaguna_zentroid/30min" });
     }
   };
@@ -55,7 +46,7 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Button className="header-cta-btn" onClick={openCalendly} disabled={!calendlyReady}>
+              <Button className="header-cta-btn" onClick={openCalendly}>
                 Book a Call
               </Button>
             </div>
@@ -82,7 +73,6 @@ export default function Header() {
               <Button
                 className="header-cta-btn-mobile"
                 onClick={() => { setMobileMenuOpen(false); openCalendly(); }}
-                disabled={!calendlyReady}
               >
                 Book a Call
               </Button>
