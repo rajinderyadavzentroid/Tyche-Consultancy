@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "@/src/component/Layout";
+import Image from "next/image";
 import { CheckCircle, Target, Eye, ArrowRight } from "lucide-react";
 import ImageWithFallback from "@/src/component/ImageWithFallback";
 import { Button } from "@/src/component/UI";
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import AboutImage from "@/src/images/about-image.jpg";
 
 const approaches = [
     {
@@ -67,11 +69,7 @@ export default function About() {
                         <Container>
                             <div className="about-overview-grid">
                                 <div>
-                                    <ImageWithFallback
-                                        src="https://images.unsplash.com/photo-1758691736975-9f7f643d178e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwdGVhbSUyMG9mZmljZSUyMGNvbGxhYm9yYXRpb258ZW58MXx8fHwxNzc0NDIyMTAyfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                                        alt="Tyche Consultancy Team"
-                                        className="about-img"
-                                    />
+                                    <Image src={AboutImage} alt="tyche clients logo" className="about-img" />
                                 </div>
                                 <div>
                                     <h2 className="about-title">Who We Are</h2>

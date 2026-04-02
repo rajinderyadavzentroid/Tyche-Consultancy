@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "@/src/component/Layout";
 import Tycheclientslogo from "@/src/images/tyche-clients-logo.jpg";
+import AboutImage from "@/src/images/about-image.jpg";
 import { Users, Building, Settings, DollarSign, Headphones, ArrowRight, CheckCircle } from "lucide-react";
 import ImageWithFallback from "@/src/component/ImageWithFallback";
 import { Button, Card, CardContent } from "@/src/component/UI";
@@ -133,11 +134,7 @@ export default function Home() {
             <Container>
               <div className="about-grid">
                 <div>
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1758691736975-9f7f643d178e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwdGVhbSUyMG9mZmljZSUyMGNvbGxhYm9yYXRpb258ZW58MXx8fHwxNzc0NDIyMTAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Team collaboration"
-                    className="about-img"
-                  />
+                  <Image src={AboutImage} alt="tyche clients logo" className="about-img" />
                 </div>
                 <div>
                   <h2 className="about-title">
