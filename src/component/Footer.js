@@ -20,7 +20,7 @@ export default function Footer() {
               <Image src={logo} alt="Tychi Corporate Solutions" />
             </h3>
             <p className="footer-desc">
-              Building dedicated offshore teams. in place of linkedin b2b.
+              Building dedicated offshore teams.
             </p>
           </div>
           <div>
