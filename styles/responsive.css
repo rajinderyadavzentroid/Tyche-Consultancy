@@ -13,6 +13,10 @@
 }
 
 @media (max-width: 768px) {
+  .footer-bottom-inner {
+    flex-direction: column;
+  }
+
   .about-overview-grid {
     grid-template-columns: 1fr;
   }

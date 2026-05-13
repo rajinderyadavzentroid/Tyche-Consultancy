@@ -1141,3 +1141,195 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+
+.footer-bottom {
+  border-top: 1px solid #ffffff1a;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-bottom-inner {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom-links {
+  gap: 1.5rem;
+  font-size: .875rem;
+  display: flex;
+}
+
+.footer-bottom-link {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+
+/* ── Privacy Policy ── */
+.pp-hero-section {
+  background: linear-gradient(135deg, var(--dark), var(--dark-2), var(--dark));
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.pp-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pp-hero-icon-wrap {
+  background: var(--yellow);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #fff;
+}
+
+.pp-hero-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.pp-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.pp-hero-desc {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.pp-hero-desc a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.pp-hero-date {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  color: #d1d5db;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.pp-main-section {
+  padding: 5rem 0;
+  background: var(--gray-light);
+}
+
+.pp-sections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pp-card {
+  background: #fff;
+  border-radius: 1rem;
+  border: 2px solid var(--gray-border);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.pp-card:hover {
+  border-color: var(--yellow);
+}
+
+.pp-card-header {
+  padding: 1.5rem 2rem 0;
+}
+
+.pp-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.pp-card-title-line {
+  height: 3px;
+  width: 3rem;
+  background: var(--yellow);
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.pp-card-body {
+  padding: 0 2rem 1.75rem;
+}
+
+.pp-item-text {
+  color: var(--gray-text);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.pp-item-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pp-item-list-item {
+  color: var(--gray-text);
+  line-height: 1.75;
+}
+
+.pp-contact-card {
+  background: var(--dark);
+  border-color: var(--dark);
+}
+
+.pp-contact-card .pp-card-title {
+  color: #fff;
+}
+
+.pp-contact-card .pp-item-text {
+  color: #d1d5db;
+}
+
+.pp-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pp-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #d1d5db;
+}
+
+.pp-contact-item a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.pp-contact-item a:hover {
+  text-decoration: underline;
+}
+
+.pp-contact-item svg {
+  flex-shrink: 0;
+  color: var(--yellow);
+}

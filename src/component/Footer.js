@@ -17,10 +17,10 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <h3 className="footer-brand">
-              <Image src={logo} alt="Tyche Consultancy" />
+              <Image src={logo} alt="Tychi Corporate Solutions" />
             </h3>
             <p className="footer-desc">
-              Making B2B outbound lead generation and LinkedIn content marketing accessible.
+              Building dedicated offshore teams. in place of linkedin b2b.
             </p>
           </div>
           <div>
@@ -36,11 +36,11 @@ export default function Footer() {
           <div>
             <h4 className="footer-heading">Contact</h4>
             <div className="footer-links">
-              <a href="mailto:shaguna@zentroid.com" className="footer-link">
+              <a href="mailto:shaguna@tycheconsultancy.com" className="footer-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M13.3334 2.66675H2.66671C1.93033 2.66675 1.33337 3.2637 1.33337 4.00008V12.0001C1.33337 12.7365 1.93033 13.3334 2.66671 13.3334H13.3334C14.0698 13.3334 14.6667 12.7365 14.6667 12.0001V4.00008C14.6667 3.2637 14.0698 2.66675 13.3334 2.66675Z" stroke="#99A1AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M14.6667 4.66675L8.68671 8.46675C8.48089 8.5957 8.24292 8.66409 8.00004 8.66409C7.75716 8.66409 7.51919 8.5957 7.31337 8.46675L1.33337 4.66675" stroke="#99A1AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>shaguna@zentroid.com
+                </svg>shaguna@tycheconsultancy.com
               </a>
             </div>
           </div>
@@ -61,7 +61,15 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p className="footer-copy">&copy; 2026 Tyche Consultancy. All rights reserved.</p>
+
+          <div className="footer-bottom-inner">
+            <p className="footer-copy">&copy; 2026 Tychi Corporate Solutions. All rights reserved.</p>
+            <div className="footer-bottom-links">
+              <a href="/privacy-policy" className="footer-bottom-link">Privacy Policy</a>
+              <a href="#" className="footer-bottom-link">Terms of Service</a>
+              <a href="#" className="footer-bottom-link">Cookie Policy</a>
+            </div>
+          </div>
         </div>
       </Container>
     </footer>

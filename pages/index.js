@@ -8,6 +8,7 @@ import { Users, Building, Settings, DollarSign, Headphones, ArrowRight, CheckCir
 import ImageWithFallback from "@/src/component/ImageWithFallback";
 import { Button, Card, CardContent } from "@/src/component/UI";
 import { Container } from "react-bootstrap";
+import OfficeImage from "@/src/images/office-image.jpg";
 
 export default function Home() {
   const services = [
@@ -80,12 +81,12 @@ export default function Home() {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <title>Home | Tyche Consultancy</title>
+        <title>Home | Tychi Corporate Solutions</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://www.tycheconsultancy.com" />
         <meta property="og:url" content="https://www.tycheconsultancy.com" />
-        <meta property="og:title" content="Home | Tyche Consultancy" />
+        <meta property="og:title" content="Home | Tychi Corporate Solutions" />
         <meta property="og:description" content="" />
         <meta property="og:image" content="https://www.tycheconsultancy.com/socials/social-icon.jpg" />
       </Head>
@@ -111,7 +112,7 @@ export default function Home() {
                   <span className="hero-title-accent">Without the Complexity</span>
                 </h1>
                 <p className="hero-subtitle">
-                  Tyche Consultancy enables global businesses to scale with exceptional talent, world-class infrastructure, and seamless operational support so you can focus entirely on growth.
+                  Tychi Corporate Solutions enables global businesses to scale with exceptional talent, world-class infrastructure, and seamless operational support so you can focus entirely on growth.
                 </p>
                 <div className="hero-btn-group">
                   <Link href="/contact-us">
@@ -134,7 +135,7 @@ export default function Home() {
             <Container>
               <div className="about-grid">
                 <div>
-                  <Image src={AboutImage} alt="tyche clients logo" className="about-img" />
+                  <Image src={AboutImage} alt="tychi clients logo" className="about-img" />
                 </div>
                 <div>
                   <h2 className="about-title">
@@ -142,7 +143,7 @@ export default function Home() {
 
                   </h2>
                   <p className="about-text">
-                    At Tyche Consultancy, we help ambitious companies expand into India without the burden of setting up operations. From hiring top-tier talent to managing infrastructure and compliance, we deliver a seamless, end-to-end experience.
+                    At Tychi Corporate Solutions, we help ambitious companies expand into India without the burden of setting up operations. From hiring top-tier talent to managing infrastructure and compliance, we deliver a seamless, end-to-end experience.
                   </p>
                   <Link href="/about">
                     <Button className="about-btn">
@@ -248,11 +249,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div>
-                    <ImageWithFallback
-                      src="https://images.unsplash.com/photo-1761818645928-47e5dad8ec76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2UlMjBpbmRpYXxlbnwxfHx8fDE3NzQ1MDIzMDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                      alt="Modern office workspace"
-                      className="why-img"
-                    />
+                    <Image src={OfficeImage} alt="tychi office " className="about-img" />
                   </div>
                 </div>
               </div>
@@ -267,7 +264,7 @@ export default function Home() {
                   Trusted by Global Companies
                 </p>
                 <div className="clients-grid">
-                  <Image src={Tycheclientslogo} alt="tyche clients logo" />
+                  <Image src={Tycheclientslogo} alt="tychi clients logo" />
                 </div>
               </div>
             </Container>

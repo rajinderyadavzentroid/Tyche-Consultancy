@@ -93,7 +93,7 @@ export default function Services() {
     return (
         <>
             <Head>
-                <title>Services – Tyche Consultancy</title>
+                <title>Services – Tychi Corporate Solutions</title>
                 <meta name="description" content="Comprehensive solutions to build, manage, and scale your remote team in India." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />

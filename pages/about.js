@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import AboutImage from "@/src/images/about-image.jpg";
 
+
 const approaches = [
     {
         icon: <CheckCircle size={32} />,
@@ -47,7 +48,7 @@ export default function About() {
     return (
         <>
             <Head>
-                <title>About – Tyche Consultancy</title>
+                <title>About – Tychi Corporate Solutions</title>
                 <meta name="description" content="Your trusted partner for building exceptional remote teams in India." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
@@ -69,13 +70,13 @@ export default function About() {
                         <Container>
                             <div className="about-overview-grid">
                                 <div>
-                                    <Image src={AboutImage} alt="tyche clients logo" className="about-img" />
+                                    <Image src={AboutImage} alt="tychi clients logo" className="about-img" />
                                 </div>
                                 <div>
                                     <h2 className="about-title">Who We Are</h2>
                                     <div className="about-overview-text">
                                         <p className="">
-                                            Tyche Consultancy is a strategic partner for global companies looking to build and scale teams in India.
+                                            Tychi Corporate Solutions is a strategic partner for global companies looking to build and scale teams in India.
                                         </p>
                                         <p className="">We go beyond recruitment offering a fully managed ecosystem that includes hiring, infrastructure, and operational support. Our goal is simple: to remove complexity and deliver a seamless expansion experience.
                                         </p> </div>
@@ -140,7 +141,7 @@ export default function About() {
                         <div className="cta-content">
                             <h2 className="cta-title">Ready to Get Started?</h2>
                             <p className="cta-subtitle">
-                                Let's discuss how Tyche Consultancy can help you build your dream team in India.
+                                Let's discuss how Tychi Corporate Solutions can help you build your dream team in India.
                             </p>
                             <Link href="/contact-us">
                                 <Button size="lg" className="cta-btn">Get in Touch</Button>

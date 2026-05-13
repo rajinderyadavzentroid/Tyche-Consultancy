@@ -26,8 +26,8 @@ export default function ContactUs() {
     return (
         <>
             <Head>
-                <title>Contact – Tyche Consultancy</title>
-                <meta name="description" content="Get in touch with Tyche Consultancy" />
+                <title>Contact – Tychi Corporate Solutions</title>
+                <meta name="description" content="Get in touch with Tychi Corporate Solutions" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -50,10 +50,10 @@ export default function ContactUs() {
                     <section className="contact-section">
                         <Container>
                             <div className="contact-methods-grid">
-                                <a className="contact-method-card" href="mailto:shaguna@zentroid.com">
+                                <a className="contact-method-card" href="mailto:shaguna@tycheconsultancy.com">
                                     <div className="contact-method-icon"><Mail size={24} /></div>
                                     <h3 className="contact-method-title">Email Us</h3>
-                                    <p className="contact-method-value">shaguna@zentroid.com</p>
+                                    <p className="contact-method-value">shaguna@tycheconsultancy.com</p>
                                     <p className="contact-method-desc">We'll respond within 24 hours</p>
                                 </a>
 

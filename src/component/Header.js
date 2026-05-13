@@ -32,7 +32,7 @@ export default function Header() {
         <nav className="header-nav">
           <div className="header-inner">
             <Link href="/" className="header-logo">
-              <Image src={logo} alt="Tyche Consultancy" />
+              <Image src={logo} alt="Tychi Corporate Solutions" />
             </Link>
 
             {/* Desktop Navigation */}
