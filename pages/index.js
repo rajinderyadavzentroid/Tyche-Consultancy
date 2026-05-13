@@ -8,7 +8,7 @@ import { Users, Building, Settings, DollarSign, Headphones, ArrowRight, CheckCir
 import ImageWithFallback from "@/src/component/ImageWithFallback";
 import { Button, Card, CardContent } from "@/src/component/UI";
 import { Container } from "react-bootstrap";
-import OfficeImage from "@/src/images/office-image.jpg";
+import OfficeImage from "@/src/images/office-image.png";
 
 export default function Home() {
   const services = [
