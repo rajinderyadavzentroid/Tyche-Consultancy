@@ -77,6 +77,8 @@ export default function Home() {
     { name: "Digital Partners", initial: "DP" }
   ];
 
+  console.log('test dev live');
+
   return (
     <>
       <Head>
