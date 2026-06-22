@@ -10,16 +10,28 @@ export default function ContactUs() {
     const [calendlyReady, setCalendlyReady] = useState(false);
 
     useEffect(() => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "https://assets.calendly.com/assets/external/widget.css";
+        document.head.appendChild(link);
+
         const script = document.createElement("script");
         script.src = "https://assets.calendly.com/assets/external/widget.js";
+        script.async = true;
         script.onload = () => setCalendlyReady(true);
         document.body.appendChild(script);
-        return () => document.body.removeChild(script);
+
+        return () => {
+            document.head.removeChild(link);
+            document.body.removeChild(script);
+        };
     }, []);
 
     const openCalendly = () => {
-        if (calendlyReady && window.Calendly) {
-            window.Calendly.initPopupWidget({ url: "https://calendly.com/shaguna_zentroid/30min" });
+        if (window.Calendly) {
+            window.Calendly.initPopupWidget({ url: "https://calendly.com/shaguna-zentroid/30min" });
+        } else {
+            alert("Calendly is still loading, please try again.");
         }
     };
 
@@ -50,19 +62,19 @@ export default function ContactUs() {
                     <section className="contact-section">
                         <Container>
                             <div className="contact-methods-grid">
-                                <a className="contact-method-card" href="mailto:shaguna@tycheconsultancy.com">
+                                <a className="contact-method-card" href="mailto:info@tychicorporatesolutions.com">
                                     <div className="contact-method-icon"><Mail size={24} /></div>
                                     <h3 className="contact-method-title">Email Us</h3>
-                                    <p className="contact-method-value">shaguna@tycheconsultancy.com</p>
+                                    <p className="contact-method-value">info@tychicorporatesolutions.com</p>
                                     <p className="contact-method-desc">We'll respond within 24 hours</p>
                                 </a>
 
-                                <a className="contact-method-card" onClick={openCalendly} style={{ cursor: "pointer" }}>
+                                <div className="contact-method-card" onClick={openCalendly} style={{ cursor: "pointer" }}>
                                     <div className="contact-method-icon"><Calendar size={24} /></div>
                                     <h3 className="contact-method-title">Schedule a Call</h3>
                                     <p className="contact-method-value">Book instantly</p>
                                     <p className="contact-method-desc">Choose a time that works for you</p>
-                                </a>
+                                </div>
                             </div>
 
                         </Container>

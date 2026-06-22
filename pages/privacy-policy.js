@@ -12,11 +12,11 @@ export default function PrivacyPolicy() {
         <title>Privacy Policy - Tychi Corporate Solutions</title>
         <meta name="description" content="Privacy Policy - Tychi Corporate Solutions values your privacy. This Privacy Policy explains how we collect, use, and protect your information." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://www.tycheconsultancy.com/privacy-policy" />
-        <meta property="og:url" content="https://www.tycheconsultancy.com/privacy-policy" />
+        <link rel="canonical" href="https://www.tychicorporatesolutions.com/privacy-policy" />
+        <meta property="og:url" content="https://www.tychicorporatesolutions.com/privacy-policy" />
         <meta property="og:title" content="Privacy Policy - Tychi Corporate Solutions" />
         <meta property="og:description" content="Privacy Policy - Tychi Corporate Solutions values your privacy. This Privacy Policy explains how we collect, use, and protect your information." />
-        <meta property="og:image" content="https://www.tycheconsultancy.com/socials/social-icon.jpg" />
+        <meta property="og:image" content="https://www.tychicorporatesolutions.com/socials/social-icon.jpg" />
       </Head>
       <Layout>
 
@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
               <h1 className="pp-hero-title">Privacy Policy</h1>
               <p className="pp-hero-desc">
                 We value your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit{" "}
-                <Link href="https://www.tycheconsultancy.com">https://www.tycheconsultancy.com</Link> or use our services.
+                <Link href="https://www.tychicorporatesolutions.com">https://www.tychicorporatesolutions.com</Link> or use our services.
               </p>
               <div className="pp-hero-date">Last Updated: 28th August 2025</div>
             </div>
@@ -132,7 +132,7 @@ export default function PrivacyPolicy() {
                   </ul>
                   <p className="pp-item-text">
                     To exercise these rights, contact us at{" "}
-                    <a href="mailto:shaguna@tycheconsultancy.com">shaguna@tycheconsultancy.com</a>.
+                    <a href="mailto:info@tychicorporatesolutions.com">info@tychicorporatesolutions.com</a>.
                   </p>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function PrivacyPolicy() {
                   <div className="pp-contact-info">
                     <div className="pp-contact-item">
                       <Mail size={18} />
-                      <a href="mailto:shaguna@tycheconsultancy.com">shaguna@tycheconsultancy.com</a>
+                      <a href="mailto:info@tychicorporatesolutions.com">info@tychicorporatesolutions.com</a>
                     </div>
                     <div className="pp-contact-item">
                       <span>Tychi Corporate Solutions</span>
