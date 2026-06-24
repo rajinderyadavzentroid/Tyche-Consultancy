@@ -3,36 +3,42 @@ import Link from "next/link";
 import Layout from "@/src/component/Layout";
 import { Mail, Phone, Calendar } from "lucide-react";
 import { Button } from "@/src/component/UI";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Container } from "react-bootstrap";
 
 export default function ContactUs() {
-    const [calendlyReady, setCalendlyReady] = useState(false);
-
     useEffect(() => {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = "https://assets.calendly.com/assets/external/widget.css";
-        document.head.appendChild(link);
+        if (!document.querySelector('link[href*="calendly"]')) {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "https://assets.calendly.com/assets/external/widget.css";
+            document.head.appendChild(link);
+        }
 
-        const script = document.createElement("script");
-        script.src = "https://assets.calendly.com/assets/external/widget.js";
-        script.async = true;
-        script.onload = () => setCalendlyReady(true);
-        document.body.appendChild(script);
-
-        return () => {
-            document.head.removeChild(link);
-            document.body.removeChild(script);
-        };
+        if (!document.querySelector('script[src*="calendly"]')) {
+            const script = document.createElement("script");
+            script.src = "https://assets.calendly.com/assets/external/widget.js";
+            script.async = true;
+            document.body.appendChild(script);
+        }
     }, []);
 
     const openCalendly = () => {
         if (window.Calendly) {
             window.Calendly.initPopupWidget({ url: "https://calendly.com/shaguna-zentroid/30min" });
-        } else {
-            alert("Calendly is still loading, please try again.");
+            return;
         }
+        // Script loaded but Calendly not ready yet — poll briefly
+        let attempts = 0;
+        const interval = setInterval(() => {
+            if (window.Calendly) {
+                clearInterval(interval);
+                window.Calendly.initPopupWidget({ url: "https://calendly.com/shaguna-zentroid/30min" });
+            } else if (++attempts > 10) {
+                clearInterval(interval);
+                alert("Calendly failed to load. Please try again.");
+            }
+        }, 300);
     };
 
     return (
