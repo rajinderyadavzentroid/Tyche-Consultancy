@@ -97,6 +97,7 @@ export default function Home() {
                   Build Your Dream Team in India:<br />
                   <span className="hero-title-accent">Without the Complexity</span>
                 </h1>
+
                 <p className="hero-subtitle">
                   Tychi Corporate Solutions enables global businesses to scale with exceptional talent, world-class infrastructure, and seamless operational support so you can focus entirely on growth.
                 </p>
