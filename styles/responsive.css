@@ -13,6 +13,11 @@
 }
 
 @media (max-width: 768px) {
+  .t-nav { display: none; }
+
+  .testimonials-title { font-size: 1.75rem; }
+  .testimonials-subtitle { font-size: 16px; }
+
   .footer-bottom-inner {
     flex-direction: column;
   }
