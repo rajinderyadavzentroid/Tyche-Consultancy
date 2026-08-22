@@ -1,0 +1,3 @@
+cd ~/apps/tyche-web
+mkdir -p .github/workflows
+nano .github/workflows/deploy.yml
