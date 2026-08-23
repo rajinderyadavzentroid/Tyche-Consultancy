@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "@/src/component/Layout";
-import Tycheclientslogo from "@/src/images/tyche-clients-logo.jpg";
+import Tycheclientslogo from "@/src/images/tyche-clients-logo.webp";
 import AboutImage from "@/src/images/about-image.jpg";
 import OfficeImage from "@/src/images/office-image.png";
 import ShagunaPhoto from "@/src/images/shaguna-khetarpal.jpg";
