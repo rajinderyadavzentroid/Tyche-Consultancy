@@ -64,8 +64,6 @@ const testimonials = [
 ];
 
 export default function Home() {
-  console.log('test');
-
   return (
     <>
       <Head>
