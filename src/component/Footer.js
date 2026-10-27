@@ -54,7 +54,7 @@ export default function Footer() {
                   <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="#99A1AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
-              <a href="https://www.instagram.com/tyche_consultancy?igsh=MXF0aXhtcDZ5MnR4ZQ==" target="_blank" rel="noopener noreferrer" className="footer-link">
+              <a href="https://www.instagram.com/tychi_corporatesolutions/" target="_blank" rel="noopener noreferrer" className="footer-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
               </a>
             </div>
